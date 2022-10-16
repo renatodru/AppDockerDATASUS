@@ -48,7 +48,7 @@ def carregador():
                         'TPDISEC1','TPDISEC2', 'TPDISEC3', 'TPDISEC4', 'TPDISEC5', 'TPDISEC6', 'TPDISEC7', 'TPDISEC8', 'TPDISEC9',  'FAEC_TP',
                         'REGCT', 'RACA_COR', 'ETNIA', 'SEQUENCIA', 'CID_MORTE', 'UTI_MES_IN', 'VAL_SADT', 'VAL_RN', 'VAL_ACOMP', 'VAL_ORTP',
                         'VAL_SANGUE', 'VAL_SADTSR', 'VAL_TRANSP', 'VAL_OBSANG', 'VAL_PED1AC', 'UTI_MES_AN', 'UTI_MES_AL', 'UTI_MES_TO',
-                        'MARCA_UTI', 'UTI_INT_IN', 'UTI_INT_AN','UTI_INT_AL', 'UTI_INT_TO', 'DIAR_ACOM',   ]
+                        'MARCA_UTI', 'UTI_INT_IN', 'UTI_INT_AN','UTI_INT_AL', 'UTI_INT_TO', 'DIAR_ACOM']
     df_RD.drop(lista_colunas, axis=1, inplace=True) #removendo colunas que não serão utilizadas
     
     subpasta = 'rotulos'
@@ -81,3 +81,4 @@ def carregador():
 
 if __name__ == '__main__':
     print(carregador())
+    

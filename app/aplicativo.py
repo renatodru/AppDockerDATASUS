@@ -1,5 +1,6 @@
 # Desenvolva uma aplicação Python Dockerizada, seguindo o exemplo de dockerfile a seguir: python.zipBaixar python.zip 
-# Você deverá desenvolver uma aplicação que você considere desafiadora/criativa, a entrega dessa atividade será um vídeo demonstrando a execução dessa aplicação. Nesse vídeo deverá ter as seguintes explicações:
+# Você deverá desenvolver uma aplicação que você considere desafiadora/criativa, a entrega dessa atividade será um vídeo demonstrando a execução dessa aplicação.
+# Nesse vídeo deverá ter as seguintes explicações:
 # 1) Explicar a aplicação desenvolvida, justificando os pontos desafiadores ou criativos
 # 2) Apresentar o Dockerfile
 # 3) Apresentar o Código Fonte
