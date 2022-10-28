@@ -7,7 +7,7 @@
 # 4) Apresentar a aplicação em execução.
 # O vídeo deverá ser hospedado no youtube como não listado e deverá ter duração de no máximo 2 minutos.
 
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, Response
 from flask_restful import Resource, Api
 
 import matplotlib.pyplot as plt
@@ -34,7 +34,11 @@ class Greeting (Resource):
         
     @app.route("/", methods=["GET"])
     def local():
-        return render_template("index.html",figura="./static/images/blank.png")    
+        return render_template("index.html",figura="./static/images/blank.png")
+    
+    @app.route("/health", methods=["GET"])
+    def health():
+        return Response("OK",status=200)
 
 def figura(complex, financ, cidade):
     df_graf = df_RD[(df_RD['MUNIC_RES']==cidade)][(df_RD['COMPLEX']==complex)][(df_RD['FINANC']==financ)]#FILTRA O DATAFRAME PARA PEGAR APENAS OS DADOS DO MUNICIPIO DE CURITIBA E ALTA COMPLEXIDADE
@@ -60,4 +64,4 @@ api.add_resource(Greeting, '/') # Rota
 
 if __name__ == '__main__':
     df_RD = leitor.carregador()
-    app.run('0.0.0.0','3333')
+    app.run('0.0.0.0',port=3333,debug=True)
